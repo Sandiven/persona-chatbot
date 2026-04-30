@@ -1,4 +1,4 @@
-# Persona Prompts (Improved + Annotated)
+# Persona Prompts 
 
 This file tracks the exact prompt pattern used by all personas.  
 Shared pattern is intentionally fixed:
