@@ -242,22 +242,3 @@ Push the change — Netlify auto-redeploys.
 > ⚠️ Never commit your `.env` file. Only `.env.example` should be in the repo.
 
 ---
-
-## Submission Checklist
-
-- [ ] GitHub repo is public and link is shared
-- [ ] README contains setup instructions and deployed link
-- [ ] `prompts.md` contains all 3 system prompts with inline annotations
-- [ ] `reflection.md` is 300–500 words
-- [ ] `.env.example` is present; no real API key committed anywhere
-- [ ] App is deployed and live
-- [ ] All 3 personas work in the live app
-- [ ] Persona switching resets the conversation
-- [ ] API errors are handled gracefully
-- [ ] UI is mobile-responsive
-
----
-
-## License
-
-MIT
