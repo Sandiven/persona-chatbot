@@ -10,8 +10,6 @@
 
 ## 📸 Screenshots
 
-> *(Add screenshots here before submission)*
-
 ### 🏠 Home / Persona Switcher
 ![Home](https://github.com/user-attachments/assets/99f26f37-18dc-4122-8bc6-3bcf447e6db3)
 
