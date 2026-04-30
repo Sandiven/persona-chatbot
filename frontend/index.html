@@ -7,41 +7,55 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="app">
-      <header class="header">
-        <h1>Persona-Based AI Chatbot</h1>
-        <p class="subtitle">Prompt Engineering Assignment</p>
-        <p class="active-persona">
-          Active Persona:
-          <span id="activePersonaLabel">Anshuman Singh</span>
-        </p>
-      </header>
+    <main class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">
+          <p class="tag">Prompt Lab</p>
+          <h1>Persona Console</h1>
+          <p class="subtitle">Switch advisors and compare guidance styles instantly.</p>
+        </div>
 
-      <section class="persona-switcher" aria-label="Persona switcher">
-        <button class="persona-btn active" data-persona="anshuman">Anshuman Singh</button>
-        <button class="persona-btn" data-persona="abhimanyu">Abhimanyu Saxena</button>
-        <button class="persona-btn" data-persona="kshitij">Kshitij Mishra</button>
+        <section class="panel" aria-label="Persona switcher">
+          <p class="panel-title">Choose Persona</p>
+          <div class="persona-switcher">
+            <button class="persona-btn active" data-persona="anshuman">Anshuman Singh</button>
+            <button class="persona-btn" data-persona="abhimanyu">Abhimanyu Saxena</button>
+            <button class="persona-btn" data-persona="kshitij">Kshitij Mishra</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="panel-title">Quick Prompts</p>
+          <div id="suggestionChips" class="chips" aria-live="polite"></div>
+        </section>
+      </aside>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div>
+            <p class="header-label">Active Persona</p>
+            <p class="active-persona">
+              <span id="activePersonaLabel">Anshuman Singh</span>
+            </p>
+          </div>
+          <span class="status-pill">Live Session</span>
+        </header>
+
+        <section id="chatBox" class="chat-box" aria-live="polite"></section>
+
+        <div id="typingIndicator" class="typing hidden">Persona is drafting a response...</div>
+
+        <form id="chatForm" class="input-area">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Type your question here..."
+            autocomplete="off"
+            required
+          />
+          <button id="sendBtn" type="submit">Send</button>
+        </form>
       </section>
-
-      <section class="suggestions">
-        <p class="suggestions-title">Quick start questions</p>
-        <div id="suggestionChips" class="chips" aria-live="polite"></div>
-      </section>
-
-      <section id="chatBox" class="chat-box" aria-live="polite"></section>
-
-      <div id="typingIndicator" class="typing hidden">Persona is thinking...</div>
-
-      <form id="chatForm" class="input-area">
-        <input
-          id="userInput"
-          type="text"
-          placeholder="Ask your question..."
-          autocomplete="off"
-          required
-        />
-        <button id="sendBtn" type="submit">Send</button>
-      </form>
     </main>
 
     <script src="script.js"></script>

@@ -1,33 +1,26 @@
-# Persona-Based AI Chatbot
+# Persona Console Chatbot
 
-A submission-ready Prompt Engineering assignment project using HTML, CSS, JavaScript, Node.js, and Groq API.
+A prompt-engineering project that compares how three mentor personas answer the same kind of user questions. The app keeps one interaction pattern (switch persona -> reset session -> chat) while giving each persona a distinct voice.
 
-## Personas Included
+## Personas
 
-- Anshuman Singh
-- Abhimanyu Saxena
-- Kshitij Mishra
+- Anshuman Singh (systems and leverage framing)
+- Abhimanyu Saxena (execution and shipping focus)
+- Kshitij Mishra (fundamentals and consistency coaching)
 
-## Features
+## What Improved
 
-- Persona switcher for all 3 personalities
-- Chat reset when persona changes
-- Active persona clearly visible in UI
-- Suggestion chips (quick-start questions) per persona
-- Typing indicator while waiting for API
-- Graceful API error handling
-- Mobile and desktop responsive UI
-- Distinct system prompts with:
-  - persona description
-  - 3 few-shot examples each
-  - chain-of-thought instruction (internal reasoning)
-  - output format instruction
-  - constraints
+- Completely redesigned frontend UI (dashboard + sidebar + clean chat workspace)
+- Persona switching still works the same and resets conversation context
+- Persona-specific quick prompts update instantly on switch
+- Active persona state is always visible in the chat header
+- Improved send-state feedback (`Sending...`) and typing indicator clarity
+- Updated prompt artifacts and reflection for better alignment with behavior
 
 ## Project Structure
 
 ```txt
-persona-chatbot/
+personas_chatbot/
 ├── backend/
 │   ├── .env.example
 │   ├── package.json
@@ -45,14 +38,15 @@ persona-chatbot/
 
 ## Local Setup
 
-### 1) Backend setup
+### 1. Backend
 
 ```bash
 cd backend
 npm install
+npm start
 ```
 
-Create `backend/.env` from `backend/.env.example` and add your key:
+Create `backend/.env` from `backend/.env.example`:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
@@ -65,66 +59,26 @@ PORT=5000
 FRONTEND_ORIGIN=http://localhost:5500
 ```
 
-Run backend:
+### 2. Frontend
 
-```bash
-npm start
-```
+Open `frontend/index.html` with Live Server (port `5500` recommended) or any static server.
 
-### 2) Frontend setup
+## API Endpoints
 
-Open `frontend/index.html` using Live Server (recommended on port 5500), or any local static server.
+- `GET /health` - basic health check
+- `POST /chat` - sends user message with selected persona
 
-## API
-
-- `GET /health` -> health check
-- `POST /chat` -> send chat message
-
-Request body:
+Example request:
 
 ```json
 {
-  "message": "How do I stay consistent?",
-  "persona": "kshitij"
+  "message": "How should I plan my next 2 weeks?",
+  "persona": "abhimanyu"
 }
 ```
 
-## Deployment
+## Notes
 
-### Frontend
-- Deploy `frontend` folder to Netlify or Vercel.
-
-### Backend
-- Deploy `backend` to Render/Railway.
-- Set environment variables in dashboard:
-  - `GROQ_API_KEY`
-  - `GROQ_MODEL`
-  - (optional) `OPENAI_API_KEY`
-  - (optional) `OPENAI_MODEL`
-  - (optional) `GEMINI_API_KEY`
-  - (optional) `GEMINI_MODEL`
-  - `FRONTEND_ORIGIN`
-
-After deployment, update `API_BASE_URL` in `frontend/script.js` with your deployed backend URL.
-
-## Submission Checklist
-
-- [ ] Public GitHub repo
-- [ ] Live project URL
-- [ ] `prompts.md` with all 3 annotated prompts
-- [ ] `reflection.md` (300-500 words)
-- [ ] `.env.example` present
-- [ ] No real API key in repo
-- [ ] Persona switching works and resets chat
-- [ ] API errors handled gracefully
-- [ ] Mobile responsive UI
-
-## Screenshots
-
-Add screenshots here before final submission:
-
-- Home screen with persona switcher
-- Chat with Anshuman
-- Chat with Abhimanyu
-- Chat with Kshitij
-- Mobile view
+- If you deploy backend, update `API_BASE_URL` in `frontend/script.js`
+- Do not commit real API keys
+- Use `prompts.md` and `reflection.md` as submission artifacts

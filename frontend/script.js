@@ -65,7 +65,9 @@ function renderSuggestions() {
 
 function resetConversation() {
   chatBox.innerHTML = "";
-  addMessage(`You are now chatting with ${personas[activePersona].label}. Ask your question.`);
+  addMessage(
+    `Session switched to ${personas[activePersona].label}. Ask one focused question to get started.`
+  );
 }
 
 function setActivePersona(personaKey) {
@@ -90,6 +92,7 @@ async function sendMessage(message) {
   addMessage(message, "user");
   typingIndicator.classList.remove("hidden");
   sendBtn.disabled = true;
+  sendBtn.textContent = "Sending...";
 
   try {
     const response = await fetch(`${API_BASE_URL}/chat`, {
@@ -118,6 +121,7 @@ async function sendMessage(message) {
   } finally {
     typingIndicator.classList.add("hidden");
     sendBtn.disabled = false;
+    sendBtn.textContent = "Send";
   }
 }
 
