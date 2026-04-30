@@ -8,17 +8,27 @@
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 > *(Add screenshots here before submission)*
 
-| Home / Persona Switcher | Chat with Anshuman | Chat with Abhimanyu | Chat with Kshitij |
-|---|---|---|---|
-| ![home](<img width="1900" height="909" alt="image" src="https://github.com/user-attachments/assets/99f26f37-18dc-4122-8bc6-3bcf447e6db3" />
-) | ![anshuman](<img width="1906" height="911" alt="image" src="https://github.com/user-attachments/assets/b0d5b682-d962-48c9-84c1-808790978521" />
-) | ![Abhimanyu](<img width="1897" height="912" alt="image" src="https://github.com/user-attachments/assets/2c8eb4cb-43fe-4ba5-8331-e46cda457d9d" />
-) | ![Kshitij](<img width="1900" height="914" alt="image" src="https://github.com/user-attachments/assets/ce18fda1-333c-4dc9-b2fa-895ec9d4cbf3" />
-) 
+### 🏠 Home / Persona Switcher
+![Home](https://github.com/user-attachments/assets/99f26f37-18dc-4122-8bc6-3bcf447e6db3)
+
+---
+
+### 💬 Chat with Anshuman
+![Anshuman](https://github.com/user-attachments/assets/b0d5b682-d962-48c9-84c1-808790978521)
+
+---
+
+### 💬 Chat with Abhimanyu
+![Abhimanyu](https://github.com/user-attachments/assets/2c8eb4cb-43fe-4ba5-8331-e46cda457d9d)
+
+---
+
+### 💬 Chat with Kshitij
+![Kshitij](https://github.com/user-attachments/assets/ce18fda1-333c-4dc9-b2fa-895ec9d4cbf3)
 
 ---
 
