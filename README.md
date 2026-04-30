@@ -87,7 +87,7 @@ persona-chatbot/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/persona-chatbot.git
+git clone https://github.com/Sandiven/persona-chatbot
 cd persona-chatbot
 ```
 
